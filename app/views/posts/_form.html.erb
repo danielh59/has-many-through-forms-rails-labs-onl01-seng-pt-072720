@@ -20,7 +20,7 @@
     <%end%> -->
 <%= f.collection_check_boxes :category_ids, Category.all, :id, :name  do |c|%>
 <%= c.label %>
-<%= c.name%>
+<%= c.check_box%>
 <%end%>
   <br>
   <%= f.fields_for :categories, post.categories.build do |categories_fields| %>
