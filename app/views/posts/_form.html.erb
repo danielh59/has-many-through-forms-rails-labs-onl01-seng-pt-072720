@@ -18,11 +18,8 @@
     <input type="checkbox" name="post[category_ids]" value= "<%=cat.id%>">
   <p>
     <%end%> -->
-<%= f.collection_check_boxes :category_ids, Category.all, :id, :name  do |c|%>
-<%= c.label %>
-<%= c.check_box%>
-<%end%>
-  <br>
+<%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>  
+<br>
   <%= f.fields_for :categories, post.categories.build do |categories_fields| %>
     <%= categories_fields.text_field :name %>
     <br> <br>
