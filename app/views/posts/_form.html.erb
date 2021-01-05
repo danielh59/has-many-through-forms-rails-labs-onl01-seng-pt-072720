@@ -12,9 +12,14 @@
   <br>
   <%= f.text_area :content %> <br>
   <br>
-  <ul>
+  <%= Category.each do |cat| %>
+  <p>
+    <label for="category_ids_<%=cat.id%>"><%= cat.name %></labe>
+  <p>
+  <%end%>
+  <!-- <ul>
   <li><%= f.collection_check_boxes :category_ids, Category.all, :id, :name %> </li>
-</ul>
+</ul> -->
   <br>
   <%= f.fields_for :categories, post.categories.build do |categories_fields| %>
     <%= categories_fields.text_field :name %>
