@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :categories
 
   def categories_attributes=(categories_hashes)
-      categories_hashes.values.each do |index, categories_attributes|
+      categories_hashes.values.each do | categories_attributes|
         category = Category.find_or_create_by(name: categories_attributes[:name])
         self.categories << category
     end
