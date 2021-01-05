@@ -15,7 +15,7 @@
   <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
   <input type="text" name="post[categories_attributes][0][name]" id="post_categories_attributes_0_name">
     <br> <br>
-  <% end %>
+
   <br>
   <br>
   <%= f.submit %>
