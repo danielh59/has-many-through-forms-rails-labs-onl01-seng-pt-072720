@@ -15,6 +15,7 @@
   <%= Category.each do |cat| %>
   <p>
     <label for="category_ids_<%=cat.id%>"><%= cat.name %></label>
+    <input type="checkbox" name="post[category_ids]" value= "<%cat.id%>"> 
   <p>
   <%end%>
   <!-- <ul>
