@@ -13,10 +13,8 @@
   <%= f.text_area :content %> <br>
   <br>
   <% Category.all.each do |cat| %>
-  <p>
     <label for="category_ids_<%=cat.id%>"><%= cat.name %></label>
     <input type="checkbox" name="post[category_ids]" value= "<%=cat.id%>">
-  <p>
     <%end%>
   <!-- <ul>
   <li><%= f.collection_check_boxes :category_ids, Category.all, :id, :name %> </li>
